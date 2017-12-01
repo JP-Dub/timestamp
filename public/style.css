@@ -9,35 +9,28 @@ body {
 }
 
 .container {
+  position: relative;
+  height: auto;
+  width: auto;
 	padding: 0;
-	margin-top: 20px;
-  height: 260px;
+	margin-top: 2%;
+  margin-left: 20%;
 }
 
 header {
-
   line-height: 30px;
   font-size: 37px;
-  margin-left: 275px;
+  margin-left: 0;
   text-align: left;
 }
-
-/*aside {
-  margin-left: 275px;
-  position: absolute;
-  height: 170px;
-  width: 1px;
-  background-color: lightgrey;
-  border: 2px solid lightgrey;
-}*/
 
 article {
   line-height: 20px;
   margin-top: -10px;
   padding-left: 20px;
   text-align: left;
-  margin-left: 275px;
-  border-left: 5px solid lightgrey;
+  margin-left: 0;
+  border-left: 5px solid lightgray;
 }
 
 article p:nth-child(1) {
@@ -50,46 +43,24 @@ article p:nth-child(1) {
 }
 
 footer {
-  position: absolute;
-  margin-left: 275px;
+  position: relative;
+  margin-left: 0;
   text-align: left;
   height: 200px;
 }
 
+mark {
+  background-color: #fce9e9;
+  color: red;
+}
+
 footer p {
   font-size: 14px;
-  background-color: #fce8e8;
-  color: red;
-  line-height: 12px;
+  line-height: 20px;
 }
 
 .example {
   font-size: 26px;
   background-color: white;
   color: black;
-}
-
-#http {
-  width: 325px;
-}
-
-#unix {
-  width: 333px;
-}
-
-ol {
-	list-style-position: inside;
-}
-ul {
-	list-style-type: none;
-}
-
-a {
-	color: #2574A9;
-}
-/****** Logo Div Styling ******/
-
-img {
-	margin: 20px auto 0 auto;
-	display: block;
 }
