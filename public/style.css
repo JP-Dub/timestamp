@@ -3,6 +3,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
+  font-size: 2vw;
 	color: #222;
 	background-color: white;
 	text-align: center;
@@ -20,6 +21,7 @@ body {
 header {
   line-height: 30px;
   font-size: 37px;
+  font-size: 4vw;
   margin-left: 0;
   text-align: left;
 }
