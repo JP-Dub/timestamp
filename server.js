@@ -1,25 +1,22 @@
-// server.js
-// where your node app starts
-
 // init project
 var express = require('express');
 var app = express();
 var obj = {
     "unix" : "", "natural" : ""
 };
-
+// allows access to the /public folder
 app.use('/public', express.static(process.cwd() + '/public'));
 
-
+// posts the index.html to the webpage
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-
+// gets the search parameters and returns either "null" or the "unix/natural" timestamp
 app.get('/:time', function(req, res) {
     var date = req.params.time;
     var isNum = date.match(/^\d{1,}$/g);
- 
+     
     function convertTime(time) {
         var regex = /(\w{3}\s\d{2})(\s\d{4})/gi;
         var natural = time.match(regex).toString().replace(regex, "$1,$2");     
@@ -55,20 +52,6 @@ app.get('/:time', function(req, res) {
     
 });
 
-/*
-// could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
-app.post("/", function (request, response) {
-  dreams.push(request.query.dream);
-  response.sendStatus(200);
-});
-
-// Simple in-memory store for now
-var dreams = [
-  "Find and count some sheep",
-  "Climb a really tall mountain",
-  "Wash the dishes"
-];
-*/
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
