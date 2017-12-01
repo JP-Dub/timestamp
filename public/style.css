@@ -28,8 +28,11 @@ header {
 
 article {
   line-height: 20px;
+  line-height: 2vmin;
   margin-top: -10px;
+  margin-top: 1vmin;
   padding-left: 20px;
+  padding-left: 2vmin;
   text-align: left;
   margin-left: 0;
   border-left: 5px solid lightgray;
@@ -41,7 +44,7 @@ article p:nth-child(1) {
 
 .user {
   margin-left: 45px;
-  margin-left: 4vw;
+  margin-left: 4.5vw;
   line-height: 30px;
   line-height: 3vmin;
 }
