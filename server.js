@@ -21,7 +21,7 @@ app.get('/:time', function(req, res) {
      
     function convertTime(time) {
         var regex = /(\w{3}\s\d{2})(\s\d{4})/gi;
-            natural = time.match(regex).toString().replace(regex, "$1,$2");     
+        natural = time.match(regex).toString().replace(regex, "$1,$2");     
         obj.natural = natural;
         return natural;
     }  
