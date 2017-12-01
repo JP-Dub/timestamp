@@ -3,7 +3,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
-  font-size: 2vw;
+  font-size: 2vmin;
 	color: #222;
 	background-color: white;
 	text-align: center;
@@ -21,7 +21,7 @@ body {
 header {
   line-height: 30px;
   font-size: 37px;
-  font-size: 4vw;
+  font-size: 4vmin;
   margin-left: 0;
   text-align: left;
 }
@@ -58,11 +58,13 @@ mark {
 
 footer p {
   font-size: 14px;
+  font-size: 1.75vmin;
   line-height: 20px;
 }
 
 .example {
   font-size: 26px;
+  font-size: 3.5vmin;
   background-color: white;
   color: black;
 }
