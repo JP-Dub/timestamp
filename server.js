@@ -18,10 +18,9 @@ app.get('/:time', function(req, res) {
   
     //var isNum = date.match(/^\d{1,}$/g);
     var unix = Number(date.match(/^\d{1,}$/g));
-    var natural = date;
+    var natural;
      
     function convertTime(time) {
-      console.log(time)
         var regex = /(\w{3}\s\d{2})(\s\d{4})/gi;
         natural = time.match(regex).toString().replace(regex, "$1,$2");     
         obj.natural = natural;
@@ -36,8 +35,11 @@ app.get('/:time', function(req, res) {
     } 
  
     if(!unix) {
-      console.log(date)
-        var time = new Date(date).toString();
+        var reg = /([a-z]{3,9})(.?\s*)(\d{1,2})(st|nd|rd|th)(,?)(\s*)(('?|\s)\d{1,4})/gi;// identifies various written time formats
+        if (date.match(reg)) {
+            date = date.replace(reg, "$1$2$3$5$6$7"); //returns a date format valid for new Date obj
+        }
+        var time = new Date(date).toString(); //
         if(time === "Invalid Date") {
             obj.natural = "null";
             obj.unix = "null";
