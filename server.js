@@ -15,12 +15,13 @@ app.get("/", function (request, response) {
 // gets the search parameters and returns either "null" or the "unix/natural" timestamp
 app.get('/:time', function(req, res) {
     var date = req.params.time;
-  console.log(date)
+  
     //var isNum = date.match(/^\d{1,}$/g);
     var unix = Number(date.match(/^\d{1,}$/g));
     var natural = date;
      
     function convertTime(time) {
+      console.log(time)
         var regex = /(\w{3}\s\d{2})(\s\d{4})/gi;
         natural = time.match(regex).toString().replace(regex, "$1,$2");     
         obj.natural = natural;
@@ -35,6 +36,7 @@ app.get('/:time', function(req, res) {
     } 
  
     if(!unix) {
+      console.log(date)
         var time = new Date(date).toString();
         if(time === "Invalid Date") {
             obj.natural = "null";
