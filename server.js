@@ -25,13 +25,7 @@ app.get('/:time', function(req, res) {
         obj.natural = natural;
         return natural;
     }  
-    //converts string to a number
-  /*  
-  if(isNum) {
-      var unix = Number(date);
-    }
-    var natural = date;
-    */
+    
     if(unix) {
         obj.unix = unix;
         natural = new Date(unix*1000).toString();
