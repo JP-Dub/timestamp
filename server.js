@@ -15,6 +15,7 @@ app.get("/", function (request, response) {
 // gets the search parameters and returns either "null" or the "unix/natural" timestamp
 app.get('/:time', function(req, res) {
     var date = req.params.time;
+  console.log(date)
     //var isNum = date.match(/^\d{1,}$/g);
     var unix = Number(date.match(/^\d{1,}$/g));
     var natural = date;
