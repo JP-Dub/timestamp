@@ -3,7 +3,7 @@
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
 
-  "name": "my-glitch-app",
+  "name": "timestamp",
   "version": "0.0.1",
   "description": "FCC Basejump: Timestamp-microservice",
   "main": "server.js",
@@ -17,12 +17,18 @@
     "node": "8.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "type": "giit",
+    "url": "https://github.com/JP-Dub/timestamp"
   },
+  "author": "joel",
   "license": "MIT",
+  "email": "jdub@quantumleap-recruitment.com",
   "keywords": [
     "node",
     "glitch",
-    "express"
+    "express",
+    "fcc",
+    "freecodecamp",
+    "timestamp-microservice"
   ]
 }
