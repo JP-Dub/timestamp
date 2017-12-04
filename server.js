@@ -18,11 +18,10 @@ app.get('/:time', function(req, res) {
     var unix = Number(date.match(/^\d{1,}$/g)); // verifies string is a number and returns the number
     var natural;
      
-    // converts timestamp to month, day and year
+    // converts "time" string to month, day and year
     function convertTime(time) {
-      console.log(time)
         var regex = /(\w{3}\s\d{2})(\s\d{4})/gi; 
-        natural = time.match(regex).toString().replace(regex, "$1,$2"); //returns the month day and year    
+        natural = time.match(regex).toString().replace(regex, "$1,$2");
         obj.natural = natural;
         return natural;
     }  
@@ -40,11 +39,11 @@ app.get('/:time', function(req, res) {
             date = date.replace(reg, "$1$2$3$5$6$7"); //returns a date format valid for new Date obj
         }
         var time = new Date(date).toString();
-        if(time === "Invalid Date") {
+        if(time === "Invalid Date") { // if the string passed is neither a date or a number, "null" is returned to the user
             obj.natural = "null";
             obj.unix = "null";
             res.json(obj);
-        } else {
+        } else { 
             time = convertTime(time);
             unix = Date.parse(time)/1000;
             obj.unix = unix;
