@@ -22,7 +22,9 @@
   },
   "author": "joel",
   "license": "MIT",
-  "email": "jdub@quantumleap-recruitment.com",
+  "bugs": { 
+    "url": "https://github.com/JP-Dub/timestamp/issues"
+},
   "keywords": [
     "node",
     "glitch",
