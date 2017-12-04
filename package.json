@@ -5,7 +5,7 @@
 
   "name": "my-glitch-app",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "FCC Basejump: Timestamp-microservice",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
