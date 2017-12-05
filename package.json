@@ -17,7 +17,7 @@
     "node": "8.x"
   },
   "repository": {
-    "type": "giit",
+    "type": "git",
     "url": "https://github.com/JP-Dub/timestamp"
   },
   "author": "joel",
